@@ -1,6 +1,8 @@
 from setuptools import setup
 import os, re
 
+version = '2.7.9'
+
 def read(*names, **kwargs):
     with open(os.path.join(os.path.dirname(__file__), *names), encoding='utf8') as fp:
         return fp.read()
@@ -13,11 +15,11 @@ def find_value(name):
     raise RuntimeError(f"Unable to find '{name}' string.")
 
 setup(
-    name                = find_value('title'),
-    use_scm_version     = True,
+    name                = "pproxy-ext",
+    version             = version,
     description         = find_value('description'),
     long_description    = read('README.rst'),
-    url                 = find_value('url'),
+    url                 = "https://github.com/localstack/python-proxy",
     author              = find_value('author'),
     author_email        = find_value('email'),
     license             = find_value('license'),
@@ -32,8 +34,11 @@ setup(
         'Topic :: Software Development :: Build Tools',
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
+        'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
+        'Programming Language :: Python :: 3.10',
+        'Programming Language :: Python :: 3.11',
     ],
     extras_require      = {
         'accelerated': [
