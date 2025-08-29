@@ -1,3 +1,7 @@
+> [!NOTE]  
+> This repository was a fork of qwj/python-proxy to add python3.11 support for LocalStack (localstack/localstack). It has since been removed as dependency, and this repository is archived.
+
+
 python-proxy
 ============
 
